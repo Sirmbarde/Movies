@@ -27,8 +27,8 @@ public class DBHandler {
             return connection;
         }
 
-        String query="CREATE TABLE products (id int primary key auto_increment,"+
-           "name VARCHAR(30) NOT NULL,"+
+  //      String query="CREATE TABLE products (id int primary key auto_increment,"+
+  //         "name VARCHAR(30) NOT NULL,"+
 //                    "PRICE FLOAT NOT NULL,"+
 //                    "quantity INT NOT NULL,"+
 //                    "description VARCHAR(50))";
