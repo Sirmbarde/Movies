@@ -6,7 +6,7 @@ public class MovieController {
 
     MovieRepository movieRepository  = new MovieRepository();
 
-    public void createMovie(Movie movie) {
+    public String createMovie(Movie movie) {
         try {
             movieRepository.create(movie);
             return "Product created successfully";

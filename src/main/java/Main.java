@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         MovieController movieController=new MovieController();
-        movieController.createMovie(new Movie())
+        System.out.println(movieController.createMovie(new Movie()));
 
       //  DBHandler dbHandler = new DBHandler ();
 
