@@ -14,4 +14,14 @@ public class Movie {
     }
 
     public Movie (){};
+
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", genre=" + genre +
+                ", yearOfRelease=" + yearOfRelease +
+                '}';
+    }
 }
+
