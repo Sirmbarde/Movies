@@ -27,4 +27,23 @@ public class MovieController {
             return null;
         }
     }
+
+  //  public void updateMovie (Movie movie) {
+   //  try {
+    //       movieRepository.update(movie);
+     //      System.out.println("Movie updated succesfully");
+    //  } catch (SQLException e) {
+   //      System.out.println(e);
+  //   }
+   // }
+
+    public ArrayList<Movie> getAllProducts() {
+
+        try {
+            return MovieRepository.getAll();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

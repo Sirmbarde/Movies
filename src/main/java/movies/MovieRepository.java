@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class MovieRepository {
 
-    DBHandler dbHandler=new DBHandler ();
+    static DBHandler dbHandler=new DBHandler ();
 
     public void create (Movie movie) throws SQLException {
         String query = "INSERT INTO movies (title, genre, yearOfRelease) VALUES(?,?,?)";
@@ -24,7 +24,7 @@ public class MovieRepository {
         preparedStatement.close();
     }
 
-    public ArrayList<Movie> getAll() throws SQLException {
+    public static ArrayList<Movie> getAll() throws SQLException {
         String query = "SELECT * FROM movies";
 
         Statement statement = dbHandler.getConnection().createStatement();
@@ -43,5 +43,20 @@ public class MovieRepository {
         }
 
         return movies;
+    }
+
+    public void update (Movie movie) throws SQLException {
+        String query="UPDATE movies SET title=?, genre=?, yearOfRelease=?, WHERE id=?";
+
+        PreparedStatement preparedStatement=dbHandler.getConnection().prepareStatement(query);
+
+        preparedStatement.setString(1, movie.title);
+        preparedStatement.setString(2, movie.genre);
+        preparedStatement.setInt(3, movie.yearOfRelease);
+        preparedStatement.setInt(4, movie.id);
+
+        preparedStatement.execute();
+        preparedStatement.close();
+
     }
 }
