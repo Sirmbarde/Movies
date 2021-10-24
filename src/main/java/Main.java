@@ -13,11 +13,6 @@ public class Main {
        // System.out.println(movieController.createMovie(new Movie("Lake", "fantasy", 2012)));
        // System.out.println(movieController.createMovie(new Movie("House", "thriller", 2000)));
 
-      // Scanner scanner= new Scanner(next);
-
-      //  Movie movie = movieController.updateMovie();
-       // movie.title="New order";
-     //   movieController.updateMovie(movie);
 
 
         System.out.println(movieController.getAllProducts());
