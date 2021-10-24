@@ -1,8 +1,14 @@
 import database.DBHandler;
+import movies.Movie;
+import movies.MovieController;
 
 public class Main {
     public static void main(String[] args) {
-        DBHandler dbHandler = new DBHandler();
+
+        MovieController movieController=new MovieController();
+        movieController.createMovie(new Movie())
+
+      //  DBHandler dbHandler = new DBHandler ();
 
     }
 }
