@@ -13,8 +13,6 @@ public class Movie {
         this.yearOfRelease = yearOfRelease;
     }
 
-    public Movie (){};
-
     public String toString() {
         return "Movie{" +
                 "id=" + id +
@@ -24,4 +22,3 @@ public class Movie {
                 '}';
     }
 }
-
